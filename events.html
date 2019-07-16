@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <a id="testlink" href="#test123" onclick="alert('hello');">click me!</a>
+    <script>
+        document.getElementById('testlink').onclick = e => {
+            console.log('Clicked!');
+        };
+        let el2 =             e => {
+                console.info('Second message');
+            };
+        document.
+            getElementById('testlink').
+            addEventListener('click', el2);
+        document.
+            getElementById('testlink').
+            addEventListener('click', el2);
+        document.getElementById('testlink').addEventListener('click',
+            e => {
+                console.info('Third message');
+            }
+        );
+        document.
+            getElementById('testlink').
+            removeEventListener('click', el2);
+        setTimeout(function () {
+            document.
+                getElementById('testlink').click();
+        }, 2000);
+    </script>
+</body>
+</html>
